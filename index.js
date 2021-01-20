@@ -258,6 +258,7 @@ function annoyingSong(number){
 
 //Grade Calculator
 /*
+
 Using the grade function below do the following: 
   1. Receive a score out of 100 
   2. Return the corresponding letter grade following this grade scale:
