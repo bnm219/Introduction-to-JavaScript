@@ -58,8 +58,8 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(num1,  num2){
+    return num1 * num2;
   }
 
 
@@ -74,8 +74,8 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age  * 7;
 }
 
 
@@ -107,8 +107,32 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(dogWeight, dogAge){
+    if (dogAge >= 1 ){
+      if (dogWeight <= 5){
+        return dogWeight * .05;
+      }
+      else if (dogWeight <= 10){
+        return dogWeight * .04;
+      }
+      else if (dogWeight <= 15){
+        return dogWeight * .03;
+      }
+      else if (dogWeight > 15){
+        return dogWeight * .02;
+      }
+    }
+    else if (dogAge < 1){
+      if (dogAge < .33){
+        return dogWeight * .01;
+      }
+      else if (dogAge < .583){
+        return dogWeight * 0.05;
+      }
+      else if (dogAge < 1){
+        return dogWeight * 0.04;
+      }
+    }
   }
 
 
@@ -133,9 +157,50 @@ Use the game function below to do the following:
   
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let randomNumber = Math.floor(Math.random() * Math.floor(3));
+let computer = 'undefined';
+
+if(randomNumber = 0){
+  computer= 'rock';
+}
+else if(randomNumber = 1){
+  computer = 'paper';
+}
+else if(randomNumber = 2){
+  computer = 'scissors';
+}
 
 function game(user, computer){
-    /*add your code here*/
+  //if it is a tie
+  if (user === 'rock' && computer === 'rock'){
+    return "it's a tie";
+  }
+  if (user === 'paper' && computer === 'paper'){
+    return "it's a tie";
+  }
+  if (user === 'scissors' && computer === 'scissors'){
+    return "it's a tie";
+  }
+  //if the user wins
+  if (user === 'paper' && computer === 'rock'){
+    return "you win!";
+  }
+  if (user === 'rock' && computer === 'scissors'){
+    return "you win!";
+  }
+  if (user === 'scissors' && computer === 'paper'){
+    return "you win!";
+  }
+  //if the user looses
+  if (user === 'rock' && computer === 'paper'){
+    return "you lose!";
+  }
+  if (user === 'scissors' && computer === 'rock'){
+    return "you lose!";
+  }
+  if (user === 'paper' && computer === 'scissors'){
+    return "you lose!";
+  }
 }
   
   
